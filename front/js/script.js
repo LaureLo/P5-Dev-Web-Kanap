@@ -10,7 +10,7 @@ fetch(`http://localhost:3000/api/products`)
 //Création des éléments + rajout des données dans les balises
 function displayProducts(products) {
   itemsSection.innerHTML = "";
-  for (let i = 0; i < products.length; i+=1) {
+  for (let i = 0; i < products.length; i += 1) {
     itemsSection.innerHTML += `
     <a href="./product.html?_id=${products[i]._id}"> 
       <article>

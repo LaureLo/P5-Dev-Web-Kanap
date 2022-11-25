@@ -50,7 +50,7 @@ function listenColorsEvent() {
 }
 //------------------------------------------------------------
 
-// Récuperer la value de quantité quand elle change
+// Récupération de la value de quantité quand elle change
 function listenQuantityEvent() {
   product_nb.addEventListener("change", (event) => {
     product_client.quantity = parseInt(event.target.value);
@@ -68,7 +68,7 @@ add_cart.addEventListener("click", () => {
 });
 //------------------------------------------------------------
 
-// Vérifier si il y as bien une couleur et une quantite de choisi
+// Vérifier s'il y a bien une couleur et une quantité de choisies
 function verifyInput(product_client) {
   if((product_client.color == "") && (product_client.quantity < 1 || product_client.quantity > 100)){
     colorQuantityMiss()
@@ -137,26 +137,26 @@ function style(){
 }
 
 function colorQuantityMiss(){
-  document.querySelector(".color__miss , .quantity__miss").textContent = "Merci de bien choisir une couleur et une quantité";
+  document.querySelector(".color__miss , .quantity__miss").textContent = "Merci de choisir une couleur et une quantité";
   styleError()
 }
 
 function colorMiss(){
-  document.querySelector(".color__miss").textContent = "Merci de bien choisir une couleur";
+  document.querySelector(".color__miss").textContent = "Merci de choisir une couleur";
   styleError()
 }
 
 function quantityMiss(){
-  document.querySelector(".quantity__miss").textContent = "Veuillez choisir une quantité de produit compris entre 1 et 100";
+  document.querySelector(".quantity__miss").textContent = "Merci de choisir une quantité de produit comprise entre 1 et 100";
   styleError()
 }
 
 function productAdded(){
-  document.querySelector(".product__added").textContent = `Votre commande viens d'etre ajoutée au panier`;
+  document.querySelector(".product__added").textContent = `Votre commande vient d'être ajoutée au panier`;
   style()
 }
 
 function excessQuantity(){
-  document.querySelector(".excess__quantity").textContent = "La quantité total d'un même article ne peux dépasser 100";
+  document.querySelector(".excess__quantity").textContent = "La quantité totale d'un même article ne peut dépasser 100";
   styleError()
 }
