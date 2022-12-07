@@ -2,5 +2,5 @@
 
 let orderId = new URLSearchParams(window.location.search).get("id");
 
-let id_order = document.getElementById("orderId");
+let id_order = document.querySelector('#orderId');
 id_order.textContent = orderId;

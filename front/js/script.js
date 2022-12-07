@@ -1,11 +1,10 @@
-let itemsSection = document.querySelector(".items");
+const url = "http://localhost:3000/api/products";
+const itemsSection = document.querySelector("#items");
 
 // Récupération des données de l'API
-fetch(`http://localhost:3000/api/products`)
+fetch(url)
   .then((products) => products.json())
-  .then((products) => {
-    displayProducts(products);
-  });
+  .then((products) => displayProducts(products));
 
 //Création des éléments + rajout des données dans les balises
 function displayProducts(products) {
