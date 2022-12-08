@@ -35,7 +35,7 @@ function displayProductInfos(product) {
   product_title.innerHTML += `<h1 id="title"> ${product.name} </h1>`;
   product_price.innerHTML += `<span id="price"> ${product.price} </span>`;
   product_description.innerHTML += `<p id="description"> ${product.description} </p>`;
-  for (let i = 0; i < product.colors.length; i++) {
+  for (let i = 0; i < product.colors.length; i += 1) {
     product_colors.innerHTML += `<option value="${product.colors[i]}">${product.colors[i]}</option>`;
   }
 }

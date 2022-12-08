@@ -136,7 +136,7 @@ function changeInput() {
 /**
  * Sélection de l'article à supprimer
  * .filter permet d'identifier quel produit supprimer
- * Si le ls est vide affiche un message
+ * Si le local storage est vide affichage d'un message
  */
 function listenDeleteEvents() {
   let btn_delete = document.querySelectorAll(".cart__item .deleteItem");
@@ -174,10 +174,10 @@ function listenDeleteEvents() {
 //------------------------------------------------------------
 
 /**
- * Ajout de la quantité de chaque produit et le prix totaux
- * Number est égale à la quantité de chaque produit pour la quantité total
+ * Ajout de la quantité de chaque produit et les prix totaux
+ * Number est égal à la quantité de chaque produit pour la quantité totale
  * Total correspond au prix totaux du panier
- * Récupération du prix actuelle du produit depuis l'api-products grâce à findIndex
+ * Récupération du prix actuel du produit depuis l'api-products grâce à findIndex
  */
 function totalQty() {
   let total_quantity = document.querySelector("#totalQuantity");
@@ -262,7 +262,7 @@ btn_order.addEventListener("click", (e) => {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
   };
 
-  // Control de la validité name
+  // Controle de la validité name
   function firstNameControl() {
     let name_form = FORM_VALUE.firstName;
     if (REG_EX_LAST_FIRST_NAME(name_form)) {
@@ -275,7 +275,7 @@ btn_order.addEventListener("click", (e) => {
     }
   }
 
-  // Control de la validité lastName
+  // Controle de la validité lastName
   function lastNameControl() {
     let last_name_form = FORM_VALUE.lastName;
     if (REG_EX_LAST_FIRST_NAME(last_name_form)) {
@@ -288,7 +288,7 @@ btn_order.addEventListener("click", (e) => {
     }
   }
 
-  // Control de la validité address
+  // Controle de la validité address
   function addressControl() {
     let address_form = FORM_VALUE.address;
     if (REG_EX_ADDRESS(address_form)) {
@@ -301,7 +301,7 @@ btn_order.addEventListener("click", (e) => {
     }
   }
 
-  // Control de la validité city
+  // Controle de la validité city
   function cityControl() {
     let city_form = FORM_VALUE.city;
     if (REG_EX_CITY(city_form)) {
@@ -313,7 +313,7 @@ btn_order.addEventListener("click", (e) => {
     }
   }
 
-  // Control de la validité email
+  // Controle de la validité email
   function emailControl() {
     let email_form = FORM_VALUE.email;
     if (REG_EX_E_MAIL(email_form)) {
