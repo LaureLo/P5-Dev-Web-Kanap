@@ -159,6 +159,6 @@ function excessQuantity(){
 }
 
 function productAdded(){
-  document.querySelector(".product__added").textContent = `Votre commande vient d'être ajoutée au panier`;
+  document.querySelector(".product__added").textContent = "Votre commande vient d'être ajoutée au panier";
   styleOk()
 }
