@@ -1,6 +1,5 @@
-// récupération de l'id pour l'ajouter dans le textContent
-
-let orderId = new URLSearchParams(window.location.search).get("id");
-
-let id_order = document.querySelector('#orderId');
-id_order.textContent = orderId;
+// Récupération orderId
+const params = new URL(document.location).searchParams;
+const orderId = params.get("orderId");
+// Affichage du numéro de commande
+document.getElementById("orderId").textContent = orderId;
